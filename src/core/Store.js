@@ -35,7 +35,7 @@ class Store {
           orderType: "Ручка",
           price: 2408,
           status: "back",
-          crearedAt: "2022-04-10T17:59:00.523Z",
+          createAt: "2022-04-10T17:59:00.523Z",
         },
         {
           id: 2,
@@ -43,7 +43,7 @@ class Store {
           orderType: "Веревка",
           price: 2880,
           status: "back",
-          crearedAt: "2022-04-10T18:30:23.219Z",
+          createAt: "2022-04-10T18:30:23.219Z",
         },
         {
           id: 3,
@@ -51,7 +51,7 @@ class Store {
           orderType: "Кресло",
           price: 2662,
           status: "new",
-          crearedAt: "2022-04-11T02:12:25.414Z",
+          createAt: "2022-04-11T02:12:25.414Z",
         },
         {
           id: 4,
@@ -59,7 +59,7 @@ class Store {
           orderType: "Веревка",
           price: 3879,
           status: "process",
-          crearedAt: "2022-04-11T05:37:06.735Z",
+          createAt: "2022-04-11T05:37:06.735Z",
         },
         {
           id: 5,
@@ -67,7 +67,7 @@ class Store {
           orderType: "Мыло",
           price: 2275,
           status: "back",
-          crearedAt: "2022-04-11T06:07:04.493Z",
+          createAt: "2022-04-11T06:07:04.493Z",
         },
         {
           id: 6,
@@ -75,7 +75,7 @@ class Store {
           orderType: "Нож",
           price: 2906,
           status: "process",
-          crearedAt: "2022-04-11T10:43:53.021Z",
+          createAt: "2022-04-11T10:43:53.021Z",
         },
         {
           id: 7,
@@ -83,7 +83,7 @@ class Store {
           orderType: "Тетрадка",
           price: 3688,
           status: "back",
-          crearedAt: "2022-04-12T05:20:20.434Z",
+          createAt: "2022-04-12T05:20:20.434Z",
         },
         {
           id: 8,
@@ -91,7 +91,7 @@ class Store {
           orderType: "Нож",
           price: 4690,
           status: "new",
-          crearedAt: "2022-04-12T05:45:56.033Z",
+          createAt: "2022-04-12T05:45:56.033Z",
         },
         {
           id: 9,
@@ -99,7 +99,7 @@ class Store {
           orderType: "Тетрадка",
           price: 2321,
           status: "back",
-          crearedAt: "2022-04-12T18:02:54.742Z",
+          createAt: "2022-04-12T18:02:54.742Z",
         },
         {
           id: 10,
@@ -107,7 +107,7 @@ class Store {
           orderType: "Тетрадка",
           price: 2326,
           status: "process",
-          crearedAt: "2022-04-12T19:46:49.955Z",
+          createAt: "2022-04-12T19:46:49.955Z",
         },
         {
           id: 11,
@@ -115,7 +115,7 @@ class Store {
           orderType: "Шина",
           price: 1726,
           status: "process",
-          crearedAt: "2022-04-12T20:05:12.447Z",
+          createAt: "2022-04-12T20:05:12.447Z",
         },
         {
           id: 12,
@@ -123,7 +123,7 @@ class Store {
           orderType: "Сковородка",
           price: 1500,
           status: "process",
-          crearedAt: "2022-04-14T04:45:55.311Z",
+          createAt: "2022-04-14T04:45:55.311Z",
         },
         {
           id: 13,
@@ -131,7 +131,7 @@ class Store {
           orderType: "Веревка",
           price: 2026,
           status: "back",
-          crearedAt: "2022-04-14T15:02:39.248Z",
+          createAt: "2022-04-14T15:02:39.248Z",
         },
         {
           id: 14,
@@ -139,7 +139,7 @@ class Store {
           orderType: "Тетрадка",
           price: 4683,
           status: "back",
-          crearedAt: "2022-04-15T00:09:32.927Z",
+          createAt: "2022-04-15T00:09:32.927Z",
         },
         {
           id: 15,
@@ -147,7 +147,7 @@ class Store {
           orderType: "Кресло",
           price: 3259,
           status: "process",
-          crearedAt: "2022-04-15T01:53:24.741Z",
+          createAt: "2022-04-15T01:53:24.741Z",
         },
         {
           id: 16,
@@ -155,7 +155,7 @@ class Store {
           orderType: "Веревка",
           price: 3363,
           status: "back",
-          crearedAt: "2022-04-15T11:44:51.000Z",
+          createAt: "2022-04-15T11:44:51.000Z",
         },
         {
           id: 17,
@@ -163,7 +163,7 @@ class Store {
           orderType: "Ноутбук",
           price: 2716,
           status: "process",
-          crearedAt: "2022-04-15T12:25:53.925Z",
+          createAt: "2022-04-15T12:25:53.925Z",
         },
         {
           id: 18,
@@ -171,7 +171,7 @@ class Store {
           orderType: "Кресло",
           price: 2856,
           status: "new",
-          crearedAt: "2022-04-15T12:50:38.092Z",
+          createAt: "2022-04-15T12:50:38.092Z",
         },
         {
           id: 19,
@@ -179,7 +179,7 @@ class Store {
           orderType: "Ручка",
           price: 2891,
           status: "back",
-          crearedAt: "2022-04-15T13:07:13.360Z",
+          createAt: "2022-04-15T13:07:13.360Z",
         },
         {
           id: 20,
@@ -187,7 +187,7 @@ class Store {
           orderType: "Ноутбук",
           price: 2820,
           status: "back",
-          crearedAt: "2022-04-15T23:28:49.440Z",
+          createAt: "2022-04-15T23:28:49.440Z",
         },
         {
           id: 21,
@@ -195,7 +195,7 @@ class Store {
           orderType: "Ручка",
           price: 1026,
           status: "new",
-          crearedAt: "2022-04-16T05:06:05.391Z",
+          createAt: "2022-04-16T05:06:05.391Z",
         },
         {
           id: 22,
@@ -203,7 +203,7 @@ class Store {
           orderType: "Сковородка",
           price: 1712,
           status: "new",
-          crearedAt: "2022-04-16T05:33:58.933Z",
+          createAt: "2022-04-16T05:33:58.933Z",
         },
         {
           id: 23,
@@ -211,7 +211,7 @@ class Store {
           orderType: "Шина",
           price: 3770,
           status: "archived",
-          crearedAt: "2022-04-16T12:08:29.765Z",
+          createAt: "2022-04-16T12:08:29.765Z",
         },
         {
           id: 24,
@@ -219,7 +219,7 @@ class Store {
           orderType: "Ручка",
           price: 1653,
           status: "new",
-          crearedAt: "2022-04-16T14:31:17.164Z",
+          createAt: "2022-04-16T14:31:17.164Z",
         },
         {
           id: 25,
@@ -227,7 +227,7 @@ class Store {
           orderType: "Мыло",
           price: 2954,
           status: "process",
-          crearedAt: "2022-04-16T15:19:17.979Z",
+          createAt: "2022-04-16T15:19:17.979Z",
         },
         {
           id: 26,
@@ -235,7 +235,7 @@ class Store {
           orderType: "Веревка",
           price: 4807,
           status: "archived",
-          crearedAt: "2022-04-16T22:04:25.310Z",
+          createAt: "2022-04-16T22:04:25.310Z",
         },
         {
           id: 27,
@@ -243,7 +243,7 @@ class Store {
           orderType: "Сковородка",
           price: 1519,
           status: "new",
-          crearedAt: "2022-04-16T22:37:51.796Z",
+          createAt: "2022-04-16T22:37:51.796Z",
         },
         {
           id: 28,
@@ -251,7 +251,7 @@ class Store {
           orderType: "Кресло",
           price: 1512,
           status: "archived",
-          crearedAt: "2022-04-17T02:15:37.657Z",
+          createAt: "2022-04-17T02:15:37.657Z",
         },
         {
           id: 29,
@@ -259,7 +259,7 @@ class Store {
           orderType: "Ручка",
           price: 1149,
           status: "archived",
-          crearedAt: "2022-04-17T03:10:12.255Z",
+          createAt: "2022-04-17T03:10:12.255Z",
         },
         {
           id: 30,
@@ -267,7 +267,7 @@ class Store {
           orderType: "Ручка",
           price: 4384,
           status: "new",
-          crearedAt: "2022-04-17T05:00:17.212Z",
+          createAt: "2022-04-17T05:00:17.212Z",
         },
       ]
     );
