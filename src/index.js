@@ -16,8 +16,11 @@ ot.on("edit", (orderId) => console.log({ orderId }));
 
 const paginator = new Paginator(
   document.querySelector('[data-mount="pagination"]'),
-  10,
+  Math.ceil(store.orders.length / 5),
   5
 );
 
-paginator.on("move", (nextPage) => console.log(nextPage));
+paginator.on("move", (nextPage) => {
+  paginator.page = nextPage;
+  ot.orders = store.orders.slice((nextPage - 1) * 5, nextPage * 5);
+});
