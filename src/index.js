@@ -1,88 +1,109 @@
-import Store from "./core/Store.js";
-import OrdersTable from "./core/OrdersTable.js";
-import Paginator from "./core/Paginator.js";
-import Navigator from "./core/Navigator.js";
-import FilterBar from "./core/filterBar.js";
+import App from "./pages/App.js";
 
-const store = new Store();
-store.download();
+const app = new App();
 
-const ordersTable = new OrdersTable(
-  document.querySelector('[data-mount="ordersTable"]'),
-  store.orders.slice(0, 5) //отобразить первые 5 заказов
-);
+console.log(app);
 
-ordersTable.on("edit", (orderId) => console.log({ orderId }));
+// import Store from "./core/Store.js";
+// import OrdersTable from "./core/OrdersTable.js";
+// import Paginator from "./core/Paginator.js";
+// import Navigator from "./core/Navigator.js";
+// import FilterBar from "./core/filterBar.js";
 
-const paginator = new Paginator(
-  document.querySelector('[data-mount="pagination"]'),
-  Math.ceil(store.orders.length / 5),
-  2
-);
+// const store = new Store();
+// store.download();
 
-paginator.on("move", (nextPage) => {
-  navigator.set("page", nextPage);
-});
+// const ordersTable = new OrdersTable(
+//   document.querySelector('[data-mount="ordersTable"]'),
+//   store.orders.slice(0, 5) //отобразить первые 5 заказов
+// );
 
-const filterBar = new FilterBar({
-  orderTypes:
-    "Сковородка Ручка Тетрадка Веревка Мыло Кресло Шина Ноутбук Нож".split(" "),
-});
+// ordersTable.on("edit", (orderId) => console.log({ orderId }));
 
-const navigator = new Navigator((navigator) => {
-  const page = parseInt(navigator.get("page", 1), 10);
+// const paginator = new Paginator(
+//   document.querySelector('[data-mount="pagination"]'),
+//   Math.ceil(store.orders.length / 5),
+//   2
+// );
 
-  let orders = store.orders;
+// paginator.on("move", (nextPage) => {
+//   navigator.set("page", nextPage);
+// });
 
-  if (navigator.has("fName")) {
-    const fName = navigator.get("fName");
-    orders = orders.filter(
-      (order) =>
-        order.user.name.toLowerCase().includes(fName.toLowerCase()) ||
-        order.user.surname.toLowerCase().includes(fName.toLowerCase())
-    );
+// const filterBar = new FilterBar({
+//   orderTypes:
+//     "Сковородка Ручка Тетрадка Веревка Мыло Кресло Шина Ноутбук Нож".split(" "),
+// });
 
-    filterBar.$nameInput.value = fName;
-  }
+// const navigator = new Navigator((navigator) => {
+//   const page = parseInt(navigator.get("page", 1), 10);
 
-  if (navigator.has("fStatus")) {
-    const fStatus = navigator.get("fStatus");
-    orders = orders.filter((order) => order.status === fStatus);
+//   let orders = store.orders;
 
-    filterBar.$statusSelect.value = fStatus;
-  }
+//   if (navigator.has("fName")) {
+//     const fName = navigator.get("fName");
+//     orders = orders.filter(
+//       (order) =>
+//         order.user.name.toLowerCase().includes(fName.toLowerCase()) ||
+//         order.user.surname.toLowerCase().includes(fName.toLowerCase())
+//     );
 
-  if (navigator.has("fOrderType")) {
-    const fOrderType = navigator.get("fOrderType");
-    orders = orders.filter((order) => order.orderType === fOrderType);
+//     filterBar.$nameInput.value = fName;
+//   }
 
-    filterBar.$orderTypeSelect.value = fOrderType;
-  }
-  if (navigator.has("fMinPrice")) {
-    const fMinPrice = Number(navigator.get("fMinPrice"));
-    orders = orders.filter((order) => order.price >= fMinPrice);
-    filterBar.$minPrice.value = fMinPrice;
-  }
-  if (navigator.has("fMaxPrice")) {
-    const fMaxPrice = Number(navigator.get("fMaxPrice"));
-    orders = orders.filter((order) => order.price <= fMaxPrice);
-    filterBar.$maxPrice.value = fMaxPrice;
-  }
+//   if (navigator.has("fStatus")) {
+//     const fStatus = navigator.get("fStatus");
+//     orders = orders.filter((order) => order.status === fStatus);
 
-  paginator.pages = Math.ceil(orders.length / 5);
-  paginator.page = Math.min(page, paginator.pages);
-  ordersTable.orders = orders.slice(
-    (paginator.page - 1) * 5,
-    paginator.page * 5
-  );
-});
+//     filterBar.$statusSelect.value = fStatus;
+//   }
 
-filterBar.subscribe((filterData) => {
-  for (const [key, value] of Object.entries(filterData)) {
-    if (value) {
-      navigator.set(key, value);
-    } else {
-      navigator.remove(key, value);
-    }
-  }
-});
+//   if (navigator.has("fOrderType")) {
+//     const fOrderType = navigator.get("fOrderType");
+//     orders = orders.filter((order) => order.orderType === fOrderType);
+
+//     filterBar.$orderTypeSelect.value = fOrderType;
+//   }
+
+//   if (navigator.has("fMinPrice")) {
+//     const fMinPrice = Number(navigator.get("fMinPrice"));
+//     orders = orders.filter((order) => order.price >= fMinPrice);
+//     filterBar.$minPrice.value = fMinPrice;
+//   }
+//   if (navigator.has("fMaxPrice")) {
+//     const fMaxPrice = Number(navigator.get("fMaxPrice"));
+//     orders = orders.filter((order) => order.price <= fMaxPrice);
+//     filterBar.$maxPrice.value = fMaxPrice;
+//   }
+
+//   paginator.pages = Math.ceil(orders.length / 5);
+//   paginator.page = Math.min(page, paginator.pages);
+//   ordersTable.orders = orders.slice(
+//     (paginator.page - 1) * 5,
+//     paginator.page * 5
+//   );
+// });
+
+// filterBar.subscribe((filterData) => {
+//   for (const [key, value] of Object.entries(filterData)) {
+//     if (value) {
+//       navigator.set(key, value);
+//     } else {
+//       navigator.remove(key);
+//     }
+//   }
+// });
+
+// const actionElements = document.querySelectorAll("[data-action]");
+// for (const actionElement of actionElements) {
+//   actionElement.addEventListener("click", (e) => {
+//     e.preventDefault();
+
+//     let { action, field, value } = actionElement.dataset;
+
+//     if (action === "filter") {
+//       field = `f${field[0].toUpperCase()}${field.slice(1)}`;
+//       navigator.set(field, value);
+//     }
+//   });
+// }

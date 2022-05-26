@@ -20,6 +20,9 @@ class Navigator extends Observable {
   }
   set(key, value) {
     //обновляем или добовляем данные в data
+    if (!value) {
+      return this.remove(key);
+    }
     this.$data = {
       ...this.$data,
       [key]: value,

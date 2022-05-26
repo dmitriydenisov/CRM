@@ -13,16 +13,15 @@ class FilterBar extends Observable {
     super();
 
     this.$nameInput = document.querySelector("[data-field='name']");
-    this.$orderTypeSelect = document.querySelector("[data-field='orderType']");
-    this.$statusSelect = document.querySelector("[data-field='status']");
-
+    this.$orderTypeSelect = document.querySelector(
+      "select[data-field='orderType']"
+    );
+    this.$statusSelect = document.querySelector("select[data-field='status']");
     this.$minPrice = document.querySelector("[data-field='minPrice']");
     this.$maxPrice = document.querySelector("[data-field='maxPrice']");
 
     this.$minDay = document.querySelector("[data-field='minDay']");
     this.$maxDay = document.querySelector("[data-field='maxDay']");
-
-    this.$minDay.value.toLocaleString("ru-RU");
 
     this.$nameInput.addEventListener("input", this.applay);
     this.$orderTypeSelect.addEventListener("change", this.applay);
