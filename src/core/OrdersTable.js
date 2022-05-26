@@ -73,7 +73,7 @@ class OrdersTable extends EventEmitter {
         .querySelector("button")
         .addEventListener("click", () => this.emit("edit", id));
 
-      tbody.append(orderRow); //вставляем хаказы
+      tbody.append(orderRow); //вставляем заказы
     }
     this.$root.append(ordersTable); // монтирование в DOM-структуру
   }

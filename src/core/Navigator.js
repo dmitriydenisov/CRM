@@ -50,10 +50,10 @@ class Navigator extends Observable {
     const params = new URLSearchParams();
 
     for (const [key, value] of Object.entries(this.$data)) {
-      parms.append(key, value);
+      params.append(key, value);
     }
 
-    history.push(null, null, `?${params.toString()}`);
+    history.pushState(null, null, `?${params.toString()}`);
     this.dispatch(this);
   }
   get(key, defultValue) {
