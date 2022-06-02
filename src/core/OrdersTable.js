@@ -51,7 +51,7 @@ class OrdersTable extends EventEmitter {
 
     //для создание строки для каждого заказа
     for (const order of this.$orders) {
-      const { id, user, orderType, price, status, createAt } = order;
+      const { id, user, orderType, price, status, createdAt } = order;
       const { name, surname } = user;
 
       const orderRow = ordersRowTemplate.content.cloneNode(true);
@@ -66,8 +66,8 @@ class OrdersTable extends EventEmitter {
       orderRow
         .querySelector(`[data-badge="${status}"]`)
         .classList.remove("hidden");
-      orderRow.querySelector('[data-field="createAt"]').textContent =
-        dateFormater.format(new Date(createAt));
+      orderRow.querySelector('[data-field="createdAt"]').textContent =
+        dateFormater.format(new Date(createdAt));
 
       orderRow
         .querySelector("button")
