@@ -1,7 +1,7 @@
 import Store from "./core/Store.js";
 
 class Order {
-  orders = {
+  order = {
     fullname: null,
     good: null,
     price: null,
@@ -9,17 +9,18 @@ class Order {
 
   add() {
     document.querySelector("[data-save]").addEventListener("click", () => {
-      orders = {
+      console.log("test");
+      order = {
         fullname: document.querySelector("[data-name]".value),
         good: document.querySelector("[data-order-good]".value),
         price: Number(document.querySelector("[data-order-price]".value)),
       };
-      console.log(orders);
+      const orderId = Store.save(order);
+      location.href = "index.html";
     });
-
-    const orderId = Store.createOrder(order);
-    location.href = "index.html";
   }
-}
 
+  save(order) {}
+}
+Order.add;
 export default Order;

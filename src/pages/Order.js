@@ -9,9 +9,11 @@ class Order {
     };
 
     add();
+    save(order);
 
     function add() {
       document.querySelector("[data-save]").addEventListener("click", () => {
+        console.log("done");
         order = {
           fullname: document.querySelector("[data-name]".value),
           good: document.querySelector("[data-order-good]".value),

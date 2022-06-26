@@ -26,7 +26,7 @@ class Store {
     }
   }
 
-  createOrder(order) {
+  save(order) {
     order.status = "nev";
     order.date = Date.now();
     order.id = Math.max(0, ...this.$orders.orders.map((x) => x.id)) + 1;
